@@ -1,7 +1,7 @@
 services:
    - mysql
 before_install:
-   - mysql -u root --password="dsmodoc" < test/travis.sql
+   - mysql -u root --password='dsmodoc' < test/travis.sql
 install: true
 jdk:
    - oraclejdk15
