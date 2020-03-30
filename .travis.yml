@@ -1,13 +1,14 @@
-services:
-   - mysql
+
 before_install:
-   - mysql -u root --password='dsmodoc' < test/travis.sql
+   - "mysql -u root --password=\"dsmodoc\" < test/travis.sql"
 install: true
 jdk:
    - oraclejdk15
 language: java
 packages:
    - oracle-java8-installer
+services:
+   - mysql
 script:
    - "mvn install"
 
